@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centralizar os elementos horizontalmente */
+  height: 100vh;
+}
+
+.tabs {
+  display: flex;
+  background-color: #333;
+  width: 100%;  /* Garantir que as abas ocupem a largura total */
+}
+
+.tabs button {
+  flex: 1;
+  padding: 18px 40px;  /* Ajustar o padding */
+  color: white;
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+  text-align: center;  /* Centralizar texto horizontalmente */
+  font-size: 1.1em;  /* Ajustar o tamanho do texto */
+  white-space: nowrap;  /* Evita quebra de linha */
+  display: flex;
+  justify-content: center;  /* Centralizar horizontalmente */
+  align-items: center;  /* Centralizar verticalmente */
+}
+
+.tabs button:hover {
+  background-color: #555;
+}
+
+.tabs button:focus {
+  outline: none;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centralizar os elementos horizontalmente */
+}
+
+h2 {
+  color: white;  /* Cor branca para H2 */
+  margin-top: -10px;  /* Mover o h2 para cima */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;  /* Garantir que o formulário ocupe a largura total */
+  max-width: 900px;  /* Aumentar a largura máxima do formulário */
+  min-width: 900px;
+  padding: 20px;  /* Adicionar padding ao formulário */
+  background-color: #f9f9f9;  /* Adicionar cor de fundo ao formulário */
+  border-radius: 8px;  /* Adicionar bordas arredondadas ao formulário */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Adicionar sombra ao formulário */
+}
+
+form label {
+  margin-bottom: 12px;  /* Ajustar a margem inferior */
+  color: #333;
+  font-weight: bold;
+  font-size: 20px;  /* Ajustar o tamanho da fonte */
+}
+
+form input, form select, form textarea {
+  padding: 4px;  /* Reduzir o padding */
+  margin-bottom: 10px;  /* Ajustar a margem inferior */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;  /* Reduzir o tamanho da fonte */
+  text-align: center;  /* Centralizar texto dentro dos inputs, selects e textarea */
+}
+
+form label {
+  text-align: center; 
+}
+
+form textarea {
+  height: 120px;  /* Ajustar a altura do textarea */
+  resize: none;  /* Desabilitar redimensionamento */
+}
+
+form button {
+  padding: 10px;  /* Ajustar o padding */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;  /* Ajustar o tamanho da fonte */
+  transition: background-color 0.3s ease;
+  max-width: 150px;  /* Ajustar o tamanho dos botões */
+  align-self: center;  /* Centralizar os botões no formulário */
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.export-pdf-button {
+  max-width: 150px;  /* Ajustar o tamanho do botão Exportar PDF */
+  margin-top: 20px;  /* Adicionar margem superior */
+  padding: 10px;  /* Ajustar o padding */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;  /* Ajustar o tamanho da fonte */
+  transition: background-color 0.3s ease;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 12px;  /* Ajustar o padding */
+  text-align: center;  /* Centralizar texto dentro das tabelas */
+}
+
+.chart-container {
+  width: 100%;  /* Manter a largura do gráfico */
+  max-width: 900px;  /* Aumentar a largura máxima do formulário */
+  min-width: 900px;
+  height: 400px;  /* Manter a altura do gráfico */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Media Queries para responsividade */
+
+/* Dispositivos pequenos (smartphones) */
+@media (max-width: 576px) {
+  .tabs {
+    flex-direction: column;
+  }
+  .tabs button {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+  form {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 15px;
+  }
+  form input, form select, form textarea {
+    font-size: 1em;
+  }
+  .chart-container {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Dispositivos médios (tablets) */
+@media (max-width: 768px) {
+  .tabs button {
+    padding: 15px;
+    font-size: 1em;
+  }
+  form {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 18px;
+  }
+  form input, form select, form textarea {
+    font-size: 1.2em;
+  }
+  .chart-container {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Dispositivos grandes (desktops) */
+@media (max-width: 992px) {
+  .tabs button {
+    padding: 16px;
+    font-size: 1.05em;
+  }
+  form {
+    max-width: 90%;
+    min-width: 90%;
+    padding: 18px;
+  }
+  form input, form select, form textarea {
+    font-size: 1.4em;
+  }
+  .chart-container {
+    min-width: 90%;
+    max-width: 90%;
+  }
+}
+
+/* Dispositivos extragrandes (monitores grandes) */
+@media (min-width: 1200px) {
+  .tabs button {
+    padding: 18px;
+    font-size: 1.1em;
+  }
+  form {
+    max-width: 900px;
+    min-width: 900px;
+    padding: 20px;
+  }
+  form input, form select, form textarea {
+    font-size: 1.2em;
+  }
+  .chart-container {
+    min-width: 900px;
+    max-width: 900px;
+  }
+}

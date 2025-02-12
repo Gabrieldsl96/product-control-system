@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradiente de fundo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px; /* Largura máxima do contêiner */
+}
+
+h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center; /* Centraliza o título h2 */
+}
+
+.login-form {
+  padding: 30px; /* Ajuste do preenchimento */
+  border-radius: 0; /* Cantos quadrados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  max-width: 400px !important;  /* Aumentar a largura máxima do formulário */
+  min-width: 400px !important;
+  background-color: white !important;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+.login-form input {
+  width: calc(100% - 20px); /* Ajuste da largura */
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 0; /* Cantos quadrados */
+  font-size: 1em;
+  display: block; /* Garante que o input ocupe uma linha completa */
+  margin-left: auto; /* Centraliza o input horizontalmente */
+  margin-right: auto; /* Centraliza o input horizontalmente */
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0; /* Cantos quadrados */
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries para responsividade */
+
+/* Dispositivos pequenos (smartphones) */
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
+  .login-form {
+    padding: 20px;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  .login-form input {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+  .login-form button {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+}
+
+/* Dispositivos médios (tablets) */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+  .login-form {
+    padding: 25px;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  h2 {
+    font-size: 2.2em;
+  }
+  .login-form input {
+    font-size: 0.95em;
+    padding: 9px;
+  }
+  .login-form button {
+    font-size: 0.95em;
+    padding: 11px;
+  }
+}
+
+/* Dispositivos grandes (desktops) */
+@media (max-width: 992px) {
+  .container {
+    max-width: 80%;
+  }
+  .login-form {
+    padding: 28px;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  h2 {
+    font-size: 2.3em;
+  }
+  .login-form input {
+    font-size: 1em;
+    padding: 10px;
+  }
+  .login-form button {
+    font-size: 1em;
+    padding: 12px;
+  }
+}
+
+/* Dispositivos extragrandes (monitores grandes) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 500px;
+  }
+  .login-form {
+    padding: 30px;
+    max-width: 400px;
+    min-width: 400px;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  .login-form input {
+    font-size: 1em;
+    padding: 10px;
+  }
+  .login-form button {
+    font-size: 1em;
+    padding: 12px;
+  }
+}
